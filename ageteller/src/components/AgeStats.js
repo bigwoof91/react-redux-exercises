@@ -7,7 +7,7 @@ class AgeStats extends Component {
         let other_date = new Date(date).getTime();
         let difference = Math.abs(today - other_date);
 
-        let days = Math.floor(difference/ (100*3600*24));
+        let days = Math.floor(difference/ (1000*3600*24));
         let years = Math.floor(days/365);
         days -= years*365;
 
