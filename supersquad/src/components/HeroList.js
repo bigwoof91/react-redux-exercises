@@ -1,22 +1,22 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { addCharacterById } from '../actions';
+import { removeHeroById } from '../actions';
 import '../App.css'
 
 class HeroList extends Component {
     render() {
         return (
             <div>
-                <h4>Heros</h4>
+                <h4>Hero Squad</h4>
                 <ul className="list-group">
                     {
-                        this.props.heros.map(character => {
+                        this.props.heroes.map(hero => {
                             return (
                                 <li className="list-group-item" key={hero.id}>
                                     <div className="list-item">{hero.name}</div>
                                     
-                                    <span className="add-hero list-item" onClick={() => this.props.addCharacterById(hero.id)}>
-                                        +
+                                    <span className="add-hero list-item" onClick={() => this.props.removeHeroById(hero.id)}>
+                                        -
                                     </span>
 
                                 </li>
@@ -31,7 +31,7 @@ class HeroList extends Component {
 
 const mapStateToProps = (state, ownProps) => {
     return {
-        heros: state.heros
+        heroes: state.heroes
     }
 }
 // const mapDispatchToProps = (dispatch, ownProps) => {
@@ -39,4 +39,4 @@ const mapStateToProps = (state, ownProps) => {
 
 // }
 
-export default connect(mapStateToProps, { addCharacterById })(HeroList);
+export default connect(mapStateToProps, { removeHeroById })(HeroList);

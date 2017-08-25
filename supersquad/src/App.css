@@ -16,6 +16,11 @@ body {
     float: right;
 }
 
+.list-group {
+    max-width: 700px;
+    margin: auto;
+}
+
 .list-item {
     display: inline-block;
 }
