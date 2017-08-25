@@ -11,7 +11,12 @@ class App extends Component {
             <div className="app">
                 <h2>SuperSquad</h2>
                 <CharacterList />
-                { this.props.heroes[0] === undefined ? null : <HeroList /> }
+
+                {this.props.heroes[0] === undefined
+                    ? null
+                    : <HeroList />
+                }
+
             </div>
 
         )
