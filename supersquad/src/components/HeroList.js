@@ -1,24 +1,21 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-// You can use this, but by passing addCharacterById as an object (as an argument) into connect
-// import { bindActionCreators } from 'redux';
 import { addCharacterById } from '../actions';
 import '../App.css'
 
-class CharacterList extends Component {
+class HeroList extends Component {
     render() {
-        console.log('this.props ', this.props);
         return (
             <div>
-                <h4>Characters</h4>
+                <h4>Heros</h4>
                 <ul className="list-group">
                     {
-                        this.props.characters.map(character => {
+                        this.props.heros.map(character => {
                             return (
-                                <li className="list-group-item" key={character.id}>
-                                    <div className="list-item">{character.name}</div>
+                                <li className="list-group-item" key={hero.id}>
+                                    <div className="list-item">{hero.name}</div>
                                     
-                                    <span className="add-hero list-item" onClick={() => this.props.addCharacterById(character.id)}>
+                                    <span className="add-hero list-item" onClick={() => this.props.addCharacterById(hero.id)}>
                                         +
                                     </span>
 
@@ -34,7 +31,7 @@ class CharacterList extends Component {
 
 const mapStateToProps = (state, ownProps) => {
     return {
-        characters: state.characters
+        heros: state.heros
     }
 }
 // const mapDispatchToProps = (dispatch, ownProps) => {
@@ -42,4 +39,4 @@ const mapStateToProps = (state, ownProps) => {
 
 // }
 
-export default connect(mapStateToProps, { addCharacterById })(CharacterList);
+export default connect(mapStateToProps, { addCharacterById })(HeroList);
