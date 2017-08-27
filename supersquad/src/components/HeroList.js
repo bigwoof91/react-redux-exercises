@@ -6,7 +6,7 @@ import '../App.css'
 class HeroList extends Component {
     render() {
         return (
-            <div>
+            <div className="col-md-6">
                 <h4>Hero Squad</h4>
                 <ul className="list-group">
                     {
