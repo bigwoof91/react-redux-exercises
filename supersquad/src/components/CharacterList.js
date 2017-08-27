@@ -7,9 +7,9 @@ import '../App.css'
 
 class CharacterList extends Component {
     render() {
-        console.log('this.props ', this.props);
+        // console.log('this.props ', this.props);
         return (
-            <div>
+            <div className="col-md-6">
                 <h4>Characters</h4>
                 <ul className="list-group">
                     {
