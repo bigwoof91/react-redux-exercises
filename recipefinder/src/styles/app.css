@@ -4,6 +4,7 @@ body {
 }
 
 .recipe-item {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -26,4 +27,10 @@ body {
     object-fit: cover;
     border: 1px solid #3b4251;
     border-radius: 2px;
+}
+
+.favorite {
+    cursor: pointer;
+    margin-right: 20px;
+    font-size: 25px;
 }
