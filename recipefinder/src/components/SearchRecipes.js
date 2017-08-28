@@ -34,6 +34,7 @@ class SearchRecipes extends Component {
         .then(json => {
             this.props.setRecipes(json.results)
         });
+        // console.log('props', this.props);
     }
     render() {
         return (
@@ -67,4 +68,4 @@ class SearchRecipes extends Component {
     }
 }
 
-export default connect(null, { setRecipes })( SearchRecipes);
+export default connect(null, { setRecipes })(SearchRecipes);
