@@ -19,6 +19,6 @@ export function favoriteRecipes(state =[], action) {
             return state;
     }
 }
-const rootReducer = combineReducers({ recipes });
+const rootReducer = combineReducers({ recipes, favoriteRecipes });
 
 export default rootReducer;
