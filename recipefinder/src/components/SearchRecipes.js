@@ -34,7 +34,7 @@ class SearchRecipes extends Component {
         .then(json => {
             this.props.setRecipes(json.results)
         });
-        console.log('input', this.props);
+        // console.log('input', this.props);
     }
     render() {
         return (
