@@ -34,7 +34,7 @@ class SearchRecipes extends Component {
         .then(json => {
             this.props.setRecipes(json.results)
         });
-        // console.log('props', this.props);
+        console.log('input', this.props);
     }
     render() {
         return (
@@ -61,8 +61,9 @@ class SearchRecipes extends Component {
                         onChange={this.handleInputChange} />
                 </FormGroup>
                 {' '}
-                <Button onClick={this.search()}>Submit</Button>
-
+                <FormGroup>
+                    <Button onClick={() => this.search()}>Submit</Button>
+                </FormGroup>
             </Form>
         )
     }
